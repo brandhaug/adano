@@ -38,7 +38,7 @@ export class ConsultationFormComponent implements OnInit {
     value.contact = true;
 
     this.inquiriesService.createInquiry(value).subscribe(res => {
-      this.flashMessagesService.show('Vellykket, vi tar kontakt.', {cssClass: 'alert-success', timeout: 60000});
+      this.flashMessagesService.show('Vellykket, vi tar kontakt.', {cssClass: 'alert-success', timeout: 6000});
       this.loadingService.setLoading(false);
     }, err => {
       this.flashMessagesService.show(err, {cssClass: 'alert-danger', timeout: 6000});
