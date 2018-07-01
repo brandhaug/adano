@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "inquiry",
+  "info": {
+    "name": "inquiry",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "resolved": {
+      "type": "boolean"
+    }
+  }
+}

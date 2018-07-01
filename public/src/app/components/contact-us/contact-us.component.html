@@ -1,0 +1,18 @@
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <img class="section-icon" *ngIf="content.icon" src="{{apiBaseUrl}}{{content.icon.url}}"
+             alt="{{content.title}}">
+      </div>
+    </div>
+    <h2 class="section-title">{{content.title}}</h2>
+
+    <hr>
+
+    <app-consultation-form></app-consultation-form>
+
+    <hr>
+
+  </div>
+</section>

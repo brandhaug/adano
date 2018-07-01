@@ -1,0 +1,14 @@
+.img-col {
+  margin-top: 50px;
+   @media (max-width:768px) {
+     margin: 0 0 20px 0;
+   }
+}
+
+.modal-dialog {
+  margin-top: 15vh;
+
+  @media (max-width: 768px){
+    margin-top: 20px;
+  }
+}

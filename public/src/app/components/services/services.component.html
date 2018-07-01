@@ -1,0 +1,15 @@
+<section id="services">
+  <div class="container">
+    <div class="row" id="services-row">
+      <div class="col-md-4 text-center" style="padding: 10px;" *ngFor="let service of services">
+        <div class="service" (click)="openService(service)">
+          <img *ngIf="service.images[0]" class="img-fluid" src="{{apiBaseUrl}}{{service.images[0].url}}"
+               alt="{{service.title}}">
+          <h4 style="margin-top: 10px; margin-bottom: 2px; font-size: 18px">{{service.title}}</h4>
+          <p style="font-size: 15px">{{service.caption}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

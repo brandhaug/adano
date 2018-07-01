@@ -1,0 +1,19 @@
+<app-navigation></app-navigation>
+
+<main *ngIf="sections">
+
+  <app-header [content]="sections[0]"></app-header>
+
+  <app-pros [content]="sections[1]"></app-pros>
+
+  <app-projects [content]="sections[2]" [projects]="projects" *ngIf="projects"></app-projects>
+
+  <app-testimonials [content]="sections[3]"></app-testimonials>
+
+  <app-about [content]="sections[4]"></app-about>
+
+  <app-contact-us [content]="sections[5]"></app-contact-us>
+
+</main>
+
+<app-footer></app-footer>

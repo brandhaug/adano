@@ -1,0 +1,134 @@
+@import "styles/variables";
+@import "styles/buttons";
+@import "styles/modals";
+@import "styles/fonts";
+@import "styles/loader";
+@import "styles/forms";
+
+#projects, #about-us {
+  background-color: $white;
+}
+
+#pros, #testimonials, #contact {
+  background-color: $gray;
+}
+
+body, html {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h4, h5 {
+  color: $black;
+}
+
+h3 {
+  color: $blue;
+}
+
+a {
+  color: $primary-light-blue;
+}
+
+header, section, footer {
+  padding: 50px 0;
+}
+
+.section-icon {
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  color: $black;
+}
+
+.break-point {
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+h1 {
+  font-size: 40px;
+
+  @media (max-width: 600px) {
+    font-size: 35px;
+  }
+
+  @media (max-width: 560px) {
+    font-size: 30px;
+  }
+}
+
+h3 {
+  font-size: 28px;
+  @media (max-width: 600px) {
+    font-size: 23px;
+  }
+
+  @media (max-width: 560px) {
+    font-size: 18px;
+  }
+}
+
+.hide-desktop {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.hide-md {
+  display: none;
+
+  @media (max-width: 992px) {
+    display: block;
+  }
+}
+
+.hide-mobile {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.show-md {
+  @media (max-width: 992px) {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: $light-2 !important;
+
+  &.swiper-pagination-bullet-active {
+    background-color: $blue !important;
+  }
+}
+
+#flashMessages {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 99;
+
+  .alert {
+    margin: 5px 0;
+    text-align: center;
+
+    p {
+      margin: 0;
+      font-size: 14px;
+    }
+  }
+}

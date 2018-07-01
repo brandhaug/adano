@@ -1,0 +1,25 @@
+<section id="about-us">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <img class="section-icon" *ngIf="content.icon" src="{{apiBaseUrl}}{{content.icon.url}}" alt="{{content.title}}">
+      </div>
+    </div>
+    <h2 class="section-title">{{content.title}}</h2>
+    <div class="row justify-content-center" id="about-row">
+      <div class="col-lg-8 col-md-10 text-center">
+        <p>{{content.body}}</p>
+      </div>
+    </div>
+    <div class="row" *ngIf="employees">
+      <div class="col-lg-3 col-sm-6 text-center employee" *ngFor="let employee of employees">
+        <img class="img-fluid"
+             *ngIf="employee.image"
+             src="{{apiBaseUrl}}{{employee.image.url}}"
+             alt="{{employee.name}}">
+        <h6>{{employee.name}}</h6>
+        <p>{{employee.position}}</p>
+      </div>
+    </div>
+  </div>
+</section>

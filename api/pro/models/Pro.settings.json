@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "pro",
+  "info": {
+    "name": "pro",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "title": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}

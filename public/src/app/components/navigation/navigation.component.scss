@@ -1,0 +1,30 @@
+@import "../../../styles/variables";
+
+nav {
+  background-color: $white;
+  box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06);
+
+  #logo {
+    margin-right: 5px;
+  }
+
+  .brand-name {
+    line-height: 50px;
+  }
+
+  .nav-item {
+    .btn {
+      margin-left: 10px;
+    }
+  }
+
+  @media all and (max-width: 576px) {
+    .navigation-container {
+      margin: 0;
+    }
+  }
+}
+
+
+
+

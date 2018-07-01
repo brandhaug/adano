@@ -1,0 +1,38 @@
+<div class="modal-header">
+  <button type="button" class="close" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body" *ngIf="project">
+  <div class="row">
+    <div class="col text-center">
+      <img *ngIf="project.logo" src="{{apiBaseUrl}}{{project.logo.url}}"
+           alt="{{project.name}} logo" style="max-width: 150px; margin-bottom: 20px;">
+    </div>
+  </div>
+
+  <div class="project-content" [innerHtml]="project.content"></div>
+  <p>{{project.location}}</p>
+  <a href="{{project.link}}" target="_blank">{{project.link}}</a>
+
+  <hr *ngIf="testimonial">
+
+  <div class="row justify-content-center" *ngIf="testimonial">
+    <div class="testimonial text-center">
+      <img *ngIf="testimonial.image" src="{{apiBaseUrl}}{{testimonial.image.url}}" alt="{{testimonial.name}}">
+      <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <p>"{{testimonial.content}}"</p>
+      <h6><i>- {{testimonial.name}}</i></h6>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row justify-content-center" *ngFor="let image of project.images">
+    <div class="col-md-10">
+      <img style="margin: 20px 0; border: 1px solid #dddddd" class="img-fluid"
+           src="{{apiBaseUrl}}{{image.url}}">
+    </div>
+  </div>
+</div>

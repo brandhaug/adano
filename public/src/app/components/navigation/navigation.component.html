@@ -1,0 +1,31 @@
+<nav class="navbar navbar-light navbar-expand-md">
+  <div class="container navigation-container">
+    <a class="navbar-brand" [routerLink]="['/']">
+      <img id="logo" src="{{apiBaseUrl}}/uploads/8ab43385ccff46f7a64bad8454734e2a.png" height="50" class="d-inline-block align-top" alt="Logo">
+      <span class="brand-name show-md">Oslo Web Solutions</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" pageScroll href="#projects" (click)="navClicked('Prosjekter')">Prosjekter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" pageScroll href="#testimonials" (click)="navClicked('Referanser')">Referanser</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" pageScroll href="#about-us" (click)="navClicked('Om oss')">Om oss</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary hide-mobile" pageScroll href="#contact" (click)="navClicked('Kontakt knapp')">
+            La oss avtale et møte</a>
+          <a class="nav-link hide-desktop" pageScroll href="#contact" (click)="navClicked('Kontakt mobil')">
+            La oss avtale et møte</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

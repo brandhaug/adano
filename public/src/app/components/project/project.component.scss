@@ -1,0 +1,30 @@
+@import "../../../styles/variables";
+
+.testimonial {
+  padding: 20px;
+  img {
+    border-radius: 50%;
+    max-height: 150px;
+    margin-bottom: 10px;
+  }
+
+  .rating {
+    letter-spacing: 3px;
+    color: $yellow;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-bottom: 5px;
+  }
+
+  h6 {
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+}

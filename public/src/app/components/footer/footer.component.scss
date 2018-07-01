@@ -1,0 +1,39 @@
+@import "../../../styles/variables";
+
+footer {
+  background-color: $gray;
+  padding: 60px 0;
+
+  a {
+    color: $black;
+  }
+
+  #logo-row {
+    margin-bottom: 20px;
+  }
+
+  #contact-row {
+    .contact-col {
+      margin-bottom: 12px;
+
+      .fa {
+        color: $blue;
+        font-size: 22px;
+        margin-bottom: 5px;
+      }
+
+      .contact-info {
+        display: block;
+        font-size: 15px;
+      }
+    }
+  }
+
+  #copyright-row {
+    margin-top: 40px;
+    .copyright {
+    }
+  }
+}
+
+

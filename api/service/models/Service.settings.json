@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "service",
+  "info": {
+    "name": "service",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "url": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

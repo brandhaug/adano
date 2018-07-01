@@ -1,0 +1,27 @@
+<section id="testimonials">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text-center">
+        <img *ngIf="content.icon" src="{{apiBaseUrl}}{{content.icon.url}}" alt="{{content.title}}"
+             class="section-icon">
+      </div>
+    </div>
+    <h2 class="section-title">{{content.title}}</h2>
+    <swiper [config]="config">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide testimonial text-center" *ngFor="let testimonial of testimonials">
+          <img *ngIf="testimonial.image" src="{{apiBaseUrl}}{{testimonial.image.url}}" alt="{{testimonial.name}}">
+          <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>"{{testimonial.content}}"</p>
+          <h6><i>- {{testimonial.name}}, {{testimonial.company}}</i></h6>
+        </div>
+      </div>
+
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </swiper>
+  </div>
+</section>

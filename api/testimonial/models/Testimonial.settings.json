@@ -1,0 +1,34 @@
+{
+  "connection": "default",
+  "collectionName": "testimonial",
+  "info": {
+    "name": "testimonial",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "project": {
+      "model": "project",
+      "via": "testimonial"
+    },
+    "content": {
+      "type": "text"
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}

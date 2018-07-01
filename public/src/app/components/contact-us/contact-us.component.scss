@@ -1,0 +1,16 @@
+@import "../../../styles/variables";
+
+#contact {
+  font-weight: 300;
+  color: $black;
+
+  hr {
+    color: rgba(137, 148, 198, 0.5);
+    border-color: rgba(137, 148, 198, 0.5);
+    background-color: rgba(137, 148, 198, 0.5);
+  }
+
+  a {
+    color: $black;
+  }
+}

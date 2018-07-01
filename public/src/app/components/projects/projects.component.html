@@ -1,0 +1,20 @@
+<section id="projects">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <img class="section-icon" *ngIf="content.icon" src="{{apiBaseUrl}}{{content.icon.url}}"
+             alt="{{content.title}}">
+      </div>
+    </div>
+    <h2 class="section-title">{{content.title}}</h2>
+    <div class="row">
+      <div class="col-md-4 col-sm-6 text-center project-col"
+           *ngFor="let project of projects">
+        <div class="project" (click)="openProject(project)">
+          <img *ngIf="project.logo" class="img-fluid" src="{{apiBaseUrl}}{{project.logo.url}}"
+               alt="{{project.title}} logo">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

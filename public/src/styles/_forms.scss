@@ -1,0 +1,211 @@
+@import "variables";
+
+form {
+  margin: 40px 0;
+}
+
+.form-group {
+  text-transform: none;
+
+  .form-control, .form-control-lg {
+    &:focus {
+      border-color: $primary-blue;
+    }
+  }
+
+  &.row {
+    margin: 0;
+
+    .form-col {
+      padding: 0;
+    }
+  }
+
+  .float-label-container {
+    position: relative;
+
+    label {
+      font-size: 11px;
+      opacity: 0;
+      -webkit-transition: all .3s ease-in;
+      -moz-transition: all .3s ease-in;
+      -ms-transition: all .3s ease-in;
+      -o-transition: all .3s ease-in;
+      transition: all .3s ease-in;
+      position: absolute;
+      left: 39.5px;
+      top: 10px;
+
+    }
+
+    i {
+      position: absolute;
+      top: 13px;
+      left: 12px;
+      color: #888888;
+    }
+
+    .errors {
+      position: absolute;
+      top: 10px;
+      right: 17px;
+    }
+
+    .form-control-lg {
+      font-size: 16px;
+      -webkit-transition: all .3s ease-in;
+      transition: all .3s ease-in;
+      -moz-transition: all .3s ease-in;
+      -ms-transition: all .3s ease-in;
+
+      &::-webkit-input-placeholder {
+        -webkit-transition: all .3s ease-in;
+        transition: all .3s ease-in;
+      }
+      &:-moz-placeholder {
+        -moz-transition: all .3s ease-in;
+        transition: all .3s ease-in;
+      }
+      &::-moz-placeholder {
+        -moz-transition: all .3s ease-in;
+        transition: all .3s ease-in;
+      }
+      &:-ms-input-placeholder {
+        -ms-transition: all .3s ease-in;
+        transition: all .3s ease-in;
+      }
+      &:focus {
+        border: 1px solid $primary-blue;
+
+        &::-webkit-input-placeholder {
+          color: transparent;
+        }
+        &:-moz-placeholder {
+          color: transparent;
+        }
+        &::-moz-placeholder {
+          color: transparent;
+        }
+        &:-ms-input-placeholder {
+          color: transparent;
+        }
+      }
+
+      &:focus + label {
+        opacity: 1;
+        top: 2px;
+      }
+    }
+
+    input.form-control-lg {
+      height: 46px;
+      padding-left: 38px;
+
+      &:focus {
+        padding: 17px 10px 5px 38px;
+      }
+    }
+
+    textarea.form-control-lg {
+      height: 200px;
+
+      &:focus + label {
+        left: 15px;
+        top: 10px;
+      }
+    }
+  }
+
+  &.has-error {
+    .form-control, .form-control-lg {
+      border-color: $red;
+    }
+
+    .error {
+      color: $red;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .form-group {
+    margin-bottom: 10px;
+
+    .float-label-container {
+      input.form-control-lg {
+        height: 32px;
+        font-size: 12px;
+      }
+
+      label, .error {
+        font-size: 9px;
+      }
+
+      i {
+        top: 7px;
+      }
+
+      .errors {
+        top: 2px;
+      }
+    }
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+
+  input {
+    display: none;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 50%;
+    }
+  }
+
+  input:checked + .slider {
+    background-color: $primary-light-blue;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px $primary-light-blue;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+}
+
+.flex-form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+}

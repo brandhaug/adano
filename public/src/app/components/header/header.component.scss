@@ -1,0 +1,17 @@
+@import "../../../styles/variables";
+
+header {
+  min-height: 800px;
+
+  #header-title-row {
+    margin-top: 100px;
+  }
+
+  @media (max-width: 768px) {
+
+    #header-title-row {
+      margin-top: 30px;
+    }
+
+  }
+}

@@ -1,0 +1,28 @@
+<section id="pros">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <img class="section-icon" *ngIf="content.icon" src="{{apiBaseUrl}}{{content.icon.url}}"
+             alt="{{content.title}}">
+      </div>
+    </div>
+    <h2 class="section-title">{{content.title}}</h2>
+    <div id="pros-row">
+      <div *ngFor="let pro of pros" class="pro">
+        <img src="{{apiBaseUrl}}{{pro.image.url}}" alt="{{pro.title}}">
+        {{pro.title}}
+      </div>
+    </div>
+  </div>
+</section>
+<section id="call-to-action">
+  <div class="container">
+    <div class="row" id="header-more-information-row">
+      <div class="col text-center">
+        <h5 [innerHtml]="content.subTitle"></h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+

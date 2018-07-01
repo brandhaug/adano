@@ -1,0 +1,61 @@
+@import "../../../styles/variables";
+
+#pros-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin-left: 100px;
+  align-content: center;
+
+  .pro {
+    flex: 0 0 359px;
+    padding: 30px 0;
+    font-size: 18px;
+
+    img {
+      margin-right: 5px;
+      height: 35px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    margin-left: 60px;
+
+    .pro {
+      flex: 0 0 306px;
+      font-size: 15px;
+    }
+
+    img {
+      height: 28px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    margin-left: 30px;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    .pro {
+      padding: 15px 0;
+    }
+
+    img {
+
+    }
+  }
+}
+
+#call-to-action {
+  background-color: $gray;
+
+  h5 {
+    //color: $white;
+  }
+
+  @media (max-width: 768px) {
+    background-image: none !important;
+  }
+}
