@@ -16,17 +16,6 @@
         "ssl": "false",
         "authenticationDatabase": ""
       }
-    },
-    "production": {
-      "connector": "strapi-mongoose",
-      "settings": {
-        "client": "mongo",
-        "host": "ds253959.mlab.com",
-        "port": 53959,
-        "database": "oslowebsolutions",
-        "username": "brandhaug",
-        "password": "bi93BALuN!!"
-      }
     }
   }
 }
