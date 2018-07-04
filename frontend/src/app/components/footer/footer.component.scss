@@ -1,11 +1,12 @@
 @import "../../../styles/variables";
 
 footer {
-  background-color: $gray;
-  padding: 60px 0;
+  background: linear-gradient(315deg, $black 0, #161d29 100%);
+  padding: 320px 0 60px 0;
+  color: $white;
 
   a {
-    color: $black;
+    color: $white;
   }
 
   #logo-row {
@@ -17,7 +18,7 @@ footer {
       margin-bottom: 12px;
 
       .fa {
-        color: $blue;
+        color: $white;
         font-size: 22px;
         margin-bottom: 5px;
       }
@@ -29,10 +30,15 @@ footer {
     }
   }
 
-  #copyright-row {
+  .privacy {
     margin-top: 40px;
-    .copyright {
-    }
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 12px;
   }
 }
 

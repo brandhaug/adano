@@ -11,8 +11,8 @@ export class SectionService {
 
   constructor(private http: HttpClient) { }
 
-  getSections(url: string): Observable<Section[]> {
-    return this.http.get<Section[]>(environment.apiBaseUrl + '/section')
+  getSections(path: string): Observable<Section[]> {
+    return this.http.get<Section[]>(environment.apiBaseUrl + '/section?paths_contains=' + path + "&_sort=order:asc")
       .pipe(catchError(ErrorService.handleError));
   }
 }

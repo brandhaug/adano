@@ -9,9 +9,6 @@
     "timestamps": true
   },
   "attributes": {
-    "url": {
-      "type": "string"
-    },
     "section": {
       "type": "string"
     },
@@ -31,6 +28,9 @@
     },
     "body": {
       "type": "text"
+    },
+    "paths": {
+      "type": "json"
     }
   }
 }

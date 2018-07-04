@@ -1,0 +1,21 @@
+@import "../../../styles/variables";
+
+.step {
+  text-align: center;
+  margin: 30px auto;
+
+  .step-image {
+    max-width: 120px;
+    margin: 0 auto 10px auto;
+  }
+
+  .step-title {
+    //color: $blue;
+  }
+
+  .step-caption {
+    color: $blue;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+}

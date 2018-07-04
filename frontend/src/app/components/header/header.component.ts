@@ -13,7 +13,7 @@ import {environment} from "../../../environments/environment";
 export class HeaderComponent implements OnInit {
 
   @Input() content: Section;
-  services: Service[];
+  @Input() services: Service[];
   apiBaseUrl = environment.apiBaseUrl;
 
   constructor(private mixpanel: Angulartics2Mixpanel,
@@ -21,9 +21,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.servicesService.getServices().subscribe(res => {
-      this.services = res;
-    });
   }
 
 

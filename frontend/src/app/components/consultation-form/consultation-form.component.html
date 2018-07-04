@@ -1,41 +1,41 @@
 <form role="form" [formGroup]="myForm" (ngSubmit)="submitForm(myForm.value)" novalidate id="consultation-form">
-  <div class="form-group">
-    <div class="float-label-container">
-      <input type="text"
-             class="form-control form-control-lg"
-             formControlName="name"
-             placeholder="Navn"
-             id="name">
-      <label for="name">Navn</label>
-      <i class="fa fa-user"></i>
-      <div *ngIf="myForm.get('name').touched" class="errors">
-        <small class="error" *ngIf="myForm.get('name').hasError('required')">Dette feltet er krevd.
-        </small>
-        <small class="error" *ngIf="myForm.get('name').hasError('minlength')">Dette feltet er for kort.
-        </small>
-      </div>
-    </div>
-  </div>
+  <!--<div class="form-group">-->
+    <!--<div class="float-label-container">-->
+      <!--<input type="text"-->
+             <!--class="form-control form-control-lg"-->
+             <!--formControlName="name"-->
+             <!--placeholder="Navn"-->
+             <!--id="name">-->
+      <!--<label for="name">Navn</label>-->
+      <!--<i class="fa fa-user"></i>-->
+      <!--<div *ngIf="myForm.get('name').touched" class="errors">-->
+        <!--<small class="error" *ngIf="myForm.get('name').hasError('required')">Dette feltet er krevd.-->
+        <!--</small>-->
+        <!--<small class="error" *ngIf="myForm.get('name').hasError('minlength')">Dette feltet er for kort.-->
+        <!--</small>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
 
-  <div class="form-group">
-    <div class="float-label-container">
-      <input type="email"
-             class="form-control form-control-lg"
-             formControlName="email"
-             placeholder="E-post"
-             id="email">
-      <label for="email">E-post</label>
-      <i class="fa fa-envelope"></i>
-      <div *ngIf="myForm.get('email').touched" class="errors">
-        <small class="error" *ngIf="myForm.get('email').hasError('required')">Dette feltet er krevd.
-        </small>
-        <small class="error" *ngIf="myForm.get('email').hasError('minlength')">Dette feltet er for kort.
-        </small>
-        <small class="error" *ngIf="myForm.get('email').hasError('pattern')">Dette feltet har ugyldig verdi.
-        </small>
-      </div>
-    </div>
-  </div>
+  <!--<div class="form-group">-->
+    <!--<div class="float-label-container">-->
+      <!--<input type="email"-->
+             <!--class="form-control form-control-lg"-->
+             <!--formControlName="email"-->
+             <!--placeholder="E-post"-->
+             <!--id="email">-->
+      <!--<label for="email">E-post</label>-->
+      <!--<i class="fa fa-envelope"></i>-->
+      <!--<div *ngIf="myForm.get('email').touched" class="errors">-->
+        <!--<small class="error" *ngIf="myForm.get('email').hasError('required')">Dette feltet er krevd.-->
+        <!--</small>-->
+        <!--<small class="error" *ngIf="myForm.get('email').hasError('minlength')">Dette feltet er for kort.-->
+        <!--</small>-->
+        <!--<small class="error" *ngIf="myForm.get('email').hasError('pattern')">Dette feltet har ugyldig verdi.-->
+        <!--</small>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
 
   <div class="form-group">
     <div class="float-label-container">
@@ -60,7 +60,7 @@
 
   <div class="row">
     <div class="col text-right">
-      <button type="submit" class="btn btn-primary">Bestill gratis konsultasjon</button>
+      <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Kontakt meg</button>
     </div>
   </div>
 </form>

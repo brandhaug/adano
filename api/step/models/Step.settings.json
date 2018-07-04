@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "step",
+  "info": {
+    "name": "step",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}

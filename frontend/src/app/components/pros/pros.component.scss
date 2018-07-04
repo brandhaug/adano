@@ -47,15 +47,3 @@
     }
   }
 }
-
-#call-to-action {
-  background-color: $gray;
-
-  h5 {
-    //color: $white;
-  }
-
-  @media (max-width: 768px) {
-    background-image: none !important;
-  }
-}

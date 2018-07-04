@@ -1,1 +1,42 @@
-{}
+{
+  "service": {
+    "attributes": {
+      "paths": {
+        "appearance": ""
+      }
+    }
+  },
+  "section": {
+    "attributes": {
+      "paths": {
+        "appearance": ""
+      }
+    }
+  },
+  "step": {
+    "attributes": {
+      "title": {
+        "appearance": ""
+      },
+      "caption": {
+        "appearance": ""
+      },
+      "order": {
+        "appearance": ""
+      }
+    }
+  },
+  "faq": {
+    "attributes": {
+      "question": {
+        "appearance": ""
+      },
+      "answer": {
+        "appearance": ""
+      },
+      "order": {
+        "appearance": ""
+      }
+    }
+  }
+}

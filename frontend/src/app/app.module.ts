@@ -39,6 +39,10 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 import {Angulartics2Mixpanel} from "angulartics2/mixpanel";
 import {Angulartics2Module} from "angulartics2";
 import {AppRoutingModule} from "./app-routing.module";
+import { StepsComponent } from './components/steps/steps.component';
+import { EcommerceComponent } from './components/ecommerce/ecommerce.component';
+import { PrivacyComponent } from './components/privacy/privacy.component';
+import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +65,10 @@ import {AppRoutingModule} from "./app-routing.module";
     DesignComponent,
     WebDesignComponent,
     ConsultationFormComponent,
+    StepsComponent,
+    EcommerceComponent,
+    PrivacyComponent,
+    CallToActionComponent,
   ],
   imports: [
     BrowserModule,

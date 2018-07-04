@@ -1,0 +1,9 @@
+@import "../../../styles/variables";
+
+#call-to-action {
+  background: linear-gradient(315deg, $black 0, #161d29 100%);
+
+  h5 {
+    color: $white;
+  }
+}

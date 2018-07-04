@@ -2,17 +2,21 @@
 
 <main *ngIf="sections">
 
-  <app-header [content]="sections[0]"></app-header>
+  <app-header [content]="sections[0]" [services]="services"></app-header>
 
   <app-pros [content]="sections[1]"></app-pros>
 
-  <app-projects [content]="sections[2]" [projects]="projects" *ngIf="projects"></app-projects>
+  <app-call-to-action [content]="sections[2]"></app-call-to-action>
 
-  <app-testimonials [content]="sections[3]"></app-testimonials>
+  <app-projects [content]="sections[3]" [projects]="projects" *ngIf="projects"></app-projects>
 
-  <app-about [content]="sections[4]"></app-about>
+  <app-testimonials [content]="sections[4]"></app-testimonials>
 
-  <app-contact-us [content]="sections[5]"></app-contact-us>
+  <app-steps [content]="sections[5]"></app-steps>
+
+  <app-about [content]="sections[6]"></app-about>
+
+  <app-contact-us [content]="sections[7]"></app-contact-us>
 
 </main>
 

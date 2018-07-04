@@ -3,6 +3,7 @@
 #contact {
   font-weight: 300;
   color: $black;
+  position: relative;
 
   hr {
     color: rgba(137, 148, 198, 0.5);
@@ -12,5 +13,30 @@
 
   a {
     color: $black;
+  }
+
+  .jumbotron {
+    position: absolute;
+    bottom: -250px;
+    border-radius: 0;
+    max-width: 900px;
+
+    @media (min-width: 530px) {
+      border-radius: 5px;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-image: -webkit-gradient(linear, left top, right top, from(#8e43e7), color-stop(30%, $primary-blue), to($primary-light-blue));
+        background-image: linear-gradient(to right, #8e43e7 0%, $primary-blue 30%, $primary-light-blue 100%);
+        top: 0;
+        left: 0;
+        position: absolute;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+    }
   }
 }

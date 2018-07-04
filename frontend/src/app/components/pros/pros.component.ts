@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Angulartics2Mixpanel} from "angulartics2/mixpanel";
 import {Section} from "../../models/section.model";
 import {ProsService} from "../../services/pros.service";
 import {Pro} from "../../models/pro.model";
@@ -18,16 +17,11 @@ export class ProsComponent implements OnInit {
 
   pros: Pro[];
 
-  constructor(private mixpanel: Angulartics2Mixpanel,
-              private prosService: ProsService) { }
+  constructor(private prosService: ProsService) { }
 
   ngOnInit() {
     this.prosService.getPros().subscribe(pros => {
       this.pros = pros;
     })
-  }
-
-  contactClicked() {
-    this.mixpanel.eventTrack('Clicked header contact link', null);
   }
 }

@@ -12,8 +12,8 @@ export class ServicesService {
   constructor(private http: HttpClient) {
   }
 
-  getServices(): Observable<Service[]> {
-    return this.http.get<Service[]>(environment.apiBaseUrl + '/service')
+  getServices(path: string): Observable<Service[]> {
+    return this.http.get<Service[]>(environment.apiBaseUrl + '/service?paths_contains=' + path)
       .pipe(catchError(ErrorService.handleError));
   }
 }

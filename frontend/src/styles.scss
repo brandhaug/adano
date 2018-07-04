@@ -5,11 +5,11 @@
 @import "styles/loader";
 @import "styles/forms";
 
-#projects, #about-us {
+#projects, #steps {
   background-color: $white;
 }
 
-#pros, #testimonials, #contact {
+#pros, #testimonials, #about-us, #contact {
   background-color: $gray;
 }
 
@@ -36,7 +36,7 @@ header, section, footer {
 
 .section-icon {
   width: 80px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .section-title {
@@ -44,11 +44,30 @@ header, section, footer {
   font-size: 30px;
   font-weight: 300;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+.section-sub-title {
+  color: $blue;
+  text-align: center;
+
+  font-size: 18px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 p {
   font-size: 16px;
   color: $black;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .break-point {
@@ -131,4 +150,12 @@ h3 {
       font-size: 14px;
     }
   }
+}
+
+.jumbotron {
+  padding: 40px 70px;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 40px rgba(91,107,174,.15);
+  box-shadow: 0 10px 40px rgba(91,107,174,.15);
 }

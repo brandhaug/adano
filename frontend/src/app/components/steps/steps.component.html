@@ -1,0 +1,18 @@
+<section id="steps">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <img class="section-icon" *ngIf="content.icon" src="{{apiBaseUrl}}{{content.icon.url}}"
+             alt="{{content.title}}">
+      </div>
+    </div>
+    <h2 class="section-title">{{content.title}}</h2>
+    <div id="steps-row" class="row">
+      <div *ngFor="let step of steps" class="col-md-4 col-sm-6 step">
+        <img class="step-image" src="{{apiBaseUrl}}{{step.image.url}}" alt="{{step.title}}">
+        <h5 class="step-title">{{step.order}}. {{step.title}}</h5>
+        <div class="step-caption">{{step.caption}}</div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -12,14 +12,16 @@
       </div>
       <div class="col-lg-3 text-center contact-col">
         <i class="fa fa-map-marker"></i>
-        <span class="contact-info">Thorvald Meyers gate 14<br>0555 OSLO</span>
+        <span class="contact-info">Thorvald Meyers gate 14,<br>0555 OSLO</span>
       </div>
     </div>
     <!--<div id="logo-row" class="text-center">-->
-    <!--<img id="logo" src="/assets/images/logo/logo_icon-min.png" height="80" alt="Logo">-->
+    <!--<img id="logo" src="{{apiBaseUrl}}/uploads/8ab43385ccff46f7a64bad8454734e2a.png" height="80" alt="Logo">-->
     <!--</div>-->
-    <div id="copyright-row" class="text-center">
-      <span class="copyright">&copy; Alle rettigheter reservert - Oslo Web Solutions</span>
+
+    <div class="privacy">
+      <a [routerLink]="['/personvern']">Personvern og informasjonskapsler</a>
     </div>
+    <div class="copyright">&copy; Alle rettigheter reservert - Oslo Web Solutions</div>
   </div>
 </footer>

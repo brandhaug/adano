@@ -27,8 +27,8 @@ export class ConsultationFormComponent implements OnInit {
 
   ngOnInit() {
     this.myForm = this.fb.group({
-      'name': ['', [Validators.required, Validators.minLength(4)]],
-      'email': ['', [Validators.required, Validators.minLength(5), Validators.pattern('\\S+@\\S+\\.\\S+')]],
+      // 'name': ['', [Validators.required, Validators.minLength(4)]],
+      // 'email': ['', [Validators.required, Validators.minLength(5), Validators.pattern('\\S+@\\S+\\.\\S+')]],
       'phoneNumber': ['', [Validators.required, Validators.minLength(4), Validators.pattern('[0-9]*')]],
     });
   }

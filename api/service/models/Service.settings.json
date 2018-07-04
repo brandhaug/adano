@@ -28,6 +28,9 @@
     },
     "content": {
       "type": "text"
+    },
+    "paths": {
+      "type": "json"
     }
   }
 }
