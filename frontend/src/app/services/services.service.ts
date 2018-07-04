@@ -15,6 +15,5 @@ export class ServicesService {
   getServices(): Observable<Service[]> {
     return this.http.get<Service[]>(environment.apiBaseUrl + '/service')
       .pipe(catchError(ErrorService.handleError));
-
   }
 }

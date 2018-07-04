@@ -102,6 +102,10 @@
               "**/node_modules/**"
             ]
           }
+        },
+        "defaults": {
+          "styleExt": "scss",
+          "component": {}
         }
       }
     },
