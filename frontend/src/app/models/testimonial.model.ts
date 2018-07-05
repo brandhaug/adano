@@ -6,5 +6,5 @@ export interface Testimonial {
     alt: string,
   }];
   project: string;
-  content: string;
+  body: string;
 }

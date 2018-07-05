@@ -1,7 +1,7 @@
 export interface Service {
   title: string;
   caption: string;
-  content: string;
+  body: string;
   images: [{
     url: string;
   }];

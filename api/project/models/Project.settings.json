@@ -15,10 +15,7 @@
     "caption": {
       "type": "string"
     },
-    "url": {
-      "type": "string"
-    },
-    "content": {
+    "body": {
       "type": "text"
     },
     "logo": {
@@ -43,6 +40,9 @@
     "testimonial": {
       "model": "testimonial",
       "via": "project"
+    },
+    "paths": {
+      "type": "json"
     }
   }
 }

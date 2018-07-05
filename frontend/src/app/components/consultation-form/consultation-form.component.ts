@@ -35,11 +35,12 @@ export class ConsultationFormComponent implements OnInit {
 
   submitForm(value: any) {
     this.loadingService.setLoading(true);
-    value.contact = true;
+    value.url = this.router.url;
 
     this.inquiriesService.createInquiry(value).subscribe(res => {
       this.flashMessagesService.show('Vellykket, vi tar kontakt.', {cssClass: 'alert-success', timeout: 6000});
       this.loadingService.setLoading(false);
+      this.myForm.reset();
     }, err => {
       this.flashMessagesService.show(err, {cssClass: 'alert-danger', timeout: 6000});
       this.loadingService.setLoading(false);

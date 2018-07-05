@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.sectionsService.getSections(this.path).subscribe(sections => {
-      console.log(sections);
       this.sections = sections;
     });
 

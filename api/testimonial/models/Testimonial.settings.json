@@ -24,11 +24,14 @@
       "model": "project",
       "via": "testimonial"
     },
-    "content": {
+    "body": {
       "type": "text"
     },
     "order": {
       "type": "integer"
+    },
+    "paths": {
+      "type": "json"
     }
   }
 }

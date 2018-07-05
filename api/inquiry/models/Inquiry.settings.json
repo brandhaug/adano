@@ -20,6 +20,9 @@
     },
     "resolved": {
       "type": "boolean"
+    },
+    "url": {
+      "type": "string"
     }
   }
 }

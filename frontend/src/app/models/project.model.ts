@@ -1,7 +1,7 @@
 export interface Project {
   title: string;
   caption: string;
-  content: string;
+  body: string;
   url: string;
   logo: {
     url: string
