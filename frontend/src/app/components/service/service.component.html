@@ -7,9 +7,9 @@
 <div class="modal-body" *ngIf="service">
   <div class="row">
     <div class="col text-center">
-      <img *ngIf="service.images[0]" class="section-icon" src="{{apiBaseUrl}}/{{service.images[0].url}}" alt="{{service.images[0].alt}}">
+      <img *ngIf="service.images[0]" class="section-icon" src="{{apiBaseUrl}}{{service.images[0].url}}" alt="{{service.images[0].alt}}">
     </div>
   </div>
   <h2 class="section-title">{{service.title}}</h2>
-  <div [innerHtml]="service.body"></div>
+  <markdown [data]="service.body"></markdown>
 </div>

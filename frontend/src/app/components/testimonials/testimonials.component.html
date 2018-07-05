@@ -12,7 +12,7 @@
         <div class="swiper-slide testimonial text-center" *ngFor="let testimonial of testimonials">
           <img *ngIf="testimonial.image" src="{{apiBaseUrl}}{{testimonial.image.url}}" alt="{{testimonial.name}}">
           <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <div [innerHtml]="testimonial.body"></div>
+          <markdown [data]="testimonial.body"></markdown>
           <h6><i>- {{testimonial.name}}, {{testimonial.company}}</i></h6>
         </div>
       </div>

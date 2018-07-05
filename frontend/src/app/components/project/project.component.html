@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div class="project-content" [innerHtml]="project.body"></div>
+  <markdown class="project-content" [data]="project.body"></markdown>
   <p>{{project.location}}</p>
   <a href="{{project.link}}" target="_blank">{{project.link}}</a>
 
@@ -22,7 +22,7 @@
     <div class="testimonial text-center">
       <img *ngIf="testimonial.image" src="{{apiBaseUrl}}{{testimonial.image.url}}" alt="{{testimonial.name}}">
       <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <div [innerHtml]="testimonial.body"></div>
+      <markdown [data]="testimonial.body"></markdown>
       <h6><i>- {{testimonial.name}}</i></h6>
     </div>
   </div>

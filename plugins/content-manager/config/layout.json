@@ -6,6 +6,9 @@
       },
       "content": {
         "appearance": "WYSIWYG"
+      },
+      "body": {
+        "appearance": "WYSIWYG"
       }
     }
   },

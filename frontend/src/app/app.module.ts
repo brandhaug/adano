@@ -35,14 +35,15 @@ import {FlashMessagesModule} from "angular2-flash-messages";
 import {InquiriesService} from './services/inquiries.service';
 import {SectionService} from './services/section.service';
 import {ProsService} from './services/pros.service';
-import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
+import {Angulartics2GoogleAnalytics} from 'angulartics2/ga';
 import {Angulartics2Mixpanel} from "angulartics2/mixpanel";
 import {Angulartics2Module} from "angulartics2";
 import {AppRoutingModule} from "./app-routing.module";
-import { StepsComponent } from './components/steps/steps.component';
-import { EcommerceComponent } from './components/ecommerce/ecommerce.component';
-import { PrivacyComponent } from './components/privacy/privacy.component';
-import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
+import {StepsComponent} from './components/steps/steps.component';
+import {EcommerceComponent} from './components/ecommerce/ecommerce.component';
+import {PrivacyComponent} from './components/privacy/privacy.component';
+import {CallToActionComponent} from './components/call-to-action/call-to-action.component';
+import {MarkdownModule} from "ngx-markdown";
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { CallToActionComponent } from './components/call-to-action/call-to-actio
     NgxPageScrollModule,
     Angulartics2Module.forRoot([Angulartics2Mixpanel, Angulartics2GoogleAnalytics]),
     SwiperModule,
-    FlashMessagesModule.forRoot()
+    FlashMessagesModule.forRoot(),
+    MarkdownModule.forRoot()
   ],
   providers: [
     ProjectsService,
