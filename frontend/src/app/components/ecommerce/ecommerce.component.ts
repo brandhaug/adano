@@ -16,6 +16,7 @@ export class EcommerceComponent implements OnInit {
   projects: Project[];
   sections: Section[];
   services: Service[];
+  path: string = 'nettbutikk';
 
   constructor(private projectsService: ProjectsService,
               private sectionsService: SectionService,
@@ -23,16 +24,16 @@ export class EcommerceComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sectionsService.getSections('/nettbutikk').subscribe(sections => {
+    this.sectionsService.getSections(this.path).subscribe(sections => {
       this.sections = sections;
     });
 
-    this.projectsService.getProjects().subscribe(res => {
-      this.projects = res;
+    this.projectsService.getProjects().subscribe(projects => {
+      this.projects = projects;
     });
 
-    this.servicesService.getServices('/nettbutikk').subscribe(res => {
-      this.services = res;
+    this.servicesService.getServices(this.path).subscribe(services => {
+      this.services = services;
     });
   }
 

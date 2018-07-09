@@ -28,12 +28,12 @@ export class HomeComponent implements OnInit {
       this.sections = sections;
     });
 
-    this.projectsService.getProjects().subscribe(res => {
-      this.projects = res;
+    this.projectsService.getProjects().subscribe(projects => {
+      this.projects = projects;
     });
 
-    this.servicesService.getServices(this.path).subscribe(res => {
-      this.services = res;
+    this.servicesService.getServices(this.path).subscribe(services => {
+      this.services = services;
     });
 
   }

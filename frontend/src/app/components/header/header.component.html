@@ -1,4 +1,5 @@
-<header [ngStyle]="{'background': 'url(' + apiBaseUrl + '/uploads/8f7a9ff4d6f842239ce4269dedba209a.svg) no-repeat left center'}">
+<header
+  [ngStyle]="{'background': 'url(' + apiBaseUrl + '/uploads/8f7a9ff4d6f842239ce4269dedba209a.svg) no-repeat left center'}">
   <div class="container-fluid">
     <div class="row justify-content-center" id="header-title-row">
       <div id="header-title-col" class="col text-center">
@@ -9,4 +10,8 @@
   </div>
 
   <app-services [services]="services" *ngIf="services"></app-services>
+
+      <a pageScroll href="#pros">
+        <img id="header-arrow-down" src="../../../assets/arrow-down.svg">
+      </a>
 </header>

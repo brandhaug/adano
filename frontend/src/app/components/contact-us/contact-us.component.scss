@@ -18,11 +18,21 @@
   .jumbotron {
     position: absolute;
     bottom: -250px;
-    border-radius: 0;
-    max-width: 900px;
+    border-radius: 5px;
+    width: 700px;
+    left: calc(50% - 350px);
 
-    @media (min-width: 530px) {
-      border-radius: 5px;
+    @media (max-width: 768px) {
+      width: 90%;
+      left: calc(50% - 45%);
+    }
+
+    @media(max-width: 530px) {
+      width: 95%;
+      left: calc(50% - 47.5%);
+    }
+
+    //@media (min-width: 530px) {
 
       &:before {
         content: '';
@@ -34,9 +44,7 @@
         top: 0;
         left: 0;
         position: absolute;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
       }
-    }
+    //}
   }
 }

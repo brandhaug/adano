@@ -36,11 +36,11 @@
 swiper {
   height: 400px;
 
-  @media (max-width: 607px) {
+  @media (max-width: 520px) {
     height: 450px;
   }
 
-  @media (max-width: 421px) {
+  @media (max-width: 323px) {
     height: 500px;
   }
 }
