@@ -1,3 +1,3 @@
-# oslowebsolutions
+# adano
 
-A quick description of oslowebsolutions.
+A quick description of adano.

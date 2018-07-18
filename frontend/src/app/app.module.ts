@@ -44,6 +44,7 @@ import {EcommerceComponent} from './components/ecommerce/ecommerce.component';
 import {PrivacyComponent} from './components/privacy/privacy.component';
 import {CallToActionComponent} from './components/call-to-action/call-to-action.component';
 import {MarkdownModule} from "ngx-markdown";
+import { CookieNoticeComponent } from './components/cookie-notice/cookie-notice.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import {MarkdownModule} from "ngx-markdown";
     EcommerceComponent,
     PrivacyComponent,
     CallToActionComponent,
+    CookieNoticeComponent,
   ],
   imports: [
     BrowserModule,

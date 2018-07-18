@@ -1,0 +1,20 @@
+@import "../../../styles/variables";
+
+#cookie-notice {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  z-index: 100000;
+  font-size: 13px;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  padding: 30px;
+  background-color: $gray;
+
+  #cookie-notice-buttons-container {
+      a, button {
+        margin: 10px;
+      }
+  }
+}
