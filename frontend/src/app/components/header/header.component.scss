@@ -1,19 +1,26 @@
 @import "../../../styles/variables";
 
 header {
-  min-height: 800px;
+  height: 800px;
+  padding: 120px 0;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  background: url("../../../assets/isometric_header.svg") no-repeat center;
+  background-size: cover;
 
-  #header-title-row {
-    margin-top: 100px;
+  h1 {
+    color: $white;
   }
 
-  @media (max-width: 768px) {
+  h3 {
+    color: #45a7de;
+  }
 
-    #header-title-row {
-      margin-top: 30px;
-    }
-
+  app-services {
+    flex: 1 0 100%;
   }
 
   #header-arrow-down {
@@ -22,4 +29,35 @@ header {
     width: 40px;
     left: calc(50% - 20px);
   }
+
+
+
+  @media (max-width: 1200px) {
+    h1 {
+      font-size: 33px;
+    }
+
+    h3 {
+      font-size: 23px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    h1 {
+      font-size: 25px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    background: url("../../../assets/isometric_header_mobile.svg") no-repeat center;
+    background-size: cover;
+    align-items: normal;
+    align-content: normal;
+    text-align: center;
+  }
+
 }

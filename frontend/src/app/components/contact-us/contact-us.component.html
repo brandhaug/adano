@@ -1,14 +1,32 @@
 <section id="contact">
-    <div class="jumbotron">
-      <div class="row">
-        <div class="col text-center">
-          <img class="section-icon" *ngIf="content.icon" src="{{apiBaseUrl}}{{content.icon.url}}"
-               alt="{{content.title}}">
-        </div>
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col text-center">
+        <img class="section-icon" *ngIf="content.icon" src="{{apiBaseUrl}}{{content.icon.url}}"
+             alt="{{content.title}}">
       </div>
-      <h2 class="section-title">{{content.title}}</h2>
-      <h5 class="section-sub-title">{{content.subTitle}}</h5>
-
-      <app-consultation-form></app-consultation-form>
     </div>
+    <h2 class="section-title">{{content.title}}</h2>
+    <h5 class="section-sub-title">{{content.subTitle}}</h5>
+
+    <app-consultation-form></app-consultation-form>
+  </div>
 </section>
+<!--<section id="contact-info">-->
+  <!--<div id="contact-row" class="row justify-content-center">-->
+    <!--<div class="col-lg-3 text-center contact-col">-->
+      <!--<i class="fa fa-envelope"></i>-->
+      <!--<span class="contact-info"><a-->
+        <!--href="mailto:mbrandhaug@adano.no">mbrandhaug@adano.no</a></span>-->
+    <!--</div>-->
+    <!--<div class="col-lg-3 text-center contact-col">-->
+      <!--<i class="fa fa-phone"></i>-->
+      <!--<span class="contact-info"><a href="tel:+4792627081">+47 926 27 081</a></span>-->
+    <!--</div>-->
+    <!--<div class="col-lg-3 text-center contact-col">-->
+      <!--<i class="fa fa-map-marker"></i>-->
+      <!--<span class="contact-info">Thorvald Meyers gate 14,<br>0555 OSLO</span>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</section>-->
+

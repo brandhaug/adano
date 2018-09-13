@@ -34,17 +34,47 @@
 
     //@media (min-width: 530px) {
 
-      &:before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 4px;
-        background-image: -webkit-gradient(linear, left top, right top, from(#8e43e7), color-stop(30%, $primary-blue), to($primary-light-blue));
-        background-image: linear-gradient(to right, #8e43e7 0%, $primary-blue 30%, $primary-light-blue 100%);
-        top: 0;
-        left: 0;
-        position: absolute;
-      }
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-image: -webkit-gradient(linear, left top, right top, from(#8e43e7), color-stop(30%, $primary-blue), to($primary-light-blue));
+      background-image: linear-gradient(to right, #8e43e7 0%, $primary-blue 30%, $primary-light-blue 100%);
+      top: 0;
+      left: 0;
+      position: absolute;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
     //}
+  }
+}
+
+#contact-info {
+  background: linear-gradient(315deg, $black 0, #161d29 100%);
+  padding: 320px 0 60px 0;
+
+  #contact-row {
+    color: $white;
+
+    a {
+      color: $white;
+    }
+
+    .contact-col {
+      margin-bottom: 12px;
+
+      .fa {
+        color: $white;
+        font-size: 22px;
+        margin-bottom: 5px;
+      }
+
+      .contact-info {
+        display: block;
+        font-size: 15px;
+      }
+    }
   }
 }

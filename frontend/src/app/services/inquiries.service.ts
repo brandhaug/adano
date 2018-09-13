@@ -5,7 +5,9 @@ import {HttpClient} from "@angular/common/http";
 import { catchError } from 'rxjs/operators';
 
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class InquiriesService {
 
   constructor(private http: HttpClient) { }

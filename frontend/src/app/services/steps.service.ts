@@ -1,22 +1,37 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs/index";
+import {Observable, of} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {ErrorService} from "./error.service";
-import {Service} from "../models/service.model";
 import {environment} from "../../environments/environment";
-import {catchError} from "rxjs/operators";
+import {catchError, map} from "rxjs/operators";
 import {Step} from "../models/step.model";
+import {makeStateKey, TransferState} from "@angular/platform-browser";
+
+const stepsKey = makeStateKey('steps');
 
 @Injectable({
   providedIn: 'root'
 })
 export class StepsService {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private state: TransferState) {
   }
 
   getSteps(): Observable<Step[]> {
-    return this.http.get<Step[]>(environment.apiBaseUrl + '/step')
-      .pipe(catchError(ErrorService.handleError));
+    let steps = this.state.get(stepsKey, null as any);
+
+    if (steps) {
+      return of(steps);
+    } else {
+      return this.http.get<Step[]>(environment.apiBaseUrl + '/step')
+        .pipe(
+          map(res => {
+            this.state.set(stepsKey, res);
+            return res;
+          }),
+          catchError(ErrorService.handleError)
+        );
+    }
   }
 }

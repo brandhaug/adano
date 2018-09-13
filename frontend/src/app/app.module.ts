@@ -1,4 +1,4 @@
-import {BrowserModule, TransferState} from '@angular/platform-browser';
+import {BrowserModule, BrowserTransferStateModule, TransferState} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
@@ -22,7 +22,6 @@ import {ModalModule} from 'ngx-bootstrap';
 import {TestimonialsService} from './services/testimonials.service';
 import {ErrorService} from "./services/error.service";
 import {AllProjectsComponent} from './components/all-projects/all-projects.component';
-import {SwiperModule} from "angular2-useful-swiper";
 import {ProsComponent} from './components/pros/pros.component';
 import {ContactUsComponent} from './components/contact-us/contact-us.component';
 import {SeoComponent} from './components/seo/seo.component';
@@ -32,6 +31,7 @@ import {WebDesignComponent} from './components/web-design/web-design.component';
 import {ConsultationFormComponent} from './components/consultation-form/consultation-form.component';
 import {LoadingService} from "./services/loading.service";
 import {FlashMessagesModule} from "angular2-flash-messages";
+import {SwiperModule} from 'ngx-swiper-wrapper';
 import {InquiriesService} from './services/inquiries.service';
 import {SectionService} from './services/section.service';
 import {ProsService} from './services/pros.service';
@@ -44,7 +44,12 @@ import {EcommerceComponent} from './components/ecommerce/ecommerce.component';
 import {PrivacyComponent} from './components/privacy/privacy.component';
 import {CallToActionComponent} from './components/call-to-action/call-to-action.component';
 import {MarkdownModule} from "ngx-markdown";
-import { CookieNoticeComponent } from './components/cookie-notice/cookie-notice.component';
+import {CookieNoticeComponent} from './components/cookie-notice/cookie-notice.component';
+import {StepsService} from "./services/steps.service";
+import {CookieService} from 'ngx-cookie-service';
+import {ArticlesComponent} from "./components/articles/articles.component";
+import {ArticleComponent} from "./components/article/article.component";
+import {AllArticlesComponent} from "./components/all-articles/all-articles.component";
 
 @NgModule({
   declarations: [
@@ -72,9 +77,13 @@ import { CookieNoticeComponent } from './components/cookie-notice/cookie-notice.
     PrivacyComponent,
     CallToActionComponent,
     CookieNoticeComponent,
+    ArticlesComponent,
+    ArticleComponent,
+    AllArticlesComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'serverApp'}),
+    BrowserTransferStateModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
@@ -87,15 +96,7 @@ import { CookieNoticeComponent } from './components/cookie-notice/cookie-notice.
     MarkdownModule.forRoot()
   ],
   providers: [
-    ProjectsService,
-    ServicesService,
-    EmployeesService,
-    TestimonialsService,
-    ErrorService,
-    LoadingService,
-    InquiriesService,
-    SectionService,
-    ProsService
+    CookieService
   ],
   entryComponents: [
     ProjectComponent,

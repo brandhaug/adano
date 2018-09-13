@@ -4,18 +4,26 @@
 @import "styles/fonts";
 @import "styles/loader";
 @import "styles/forms";
+@import "styles/swiper";
 
-#projects, #steps {
+#projects, #testimonials,  #about-us, #contact {
   background-color: $white;
 }
 
-#pros, #testimonials, #about-us, #contact {
+#pros, #steps, #articles {
   background-color: $gray;
+}
+
+#home {
+  #projects, #about-us, #contact {
+    background-color: $gray;
+  }
 }
 
 body, html {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
+  color: $black;
 }
 
 h1, h2, h4, h5 {
@@ -30,7 +38,7 @@ a {
   color: $primary-light-blue;
 }
 
-header, section, footer {
+section, footer {
   padding: 50px 0;
 }
 
@@ -124,14 +132,6 @@ h3 {
 .show-md {
   @media (max-width: 992px) {
     display: none;
-  }
-}
-
-.swiper-pagination-bullet {
-  background-color: $light-2 !important;
-
-  &.swiper-pagination-bullet-active {
-    background-color: $blue !important;
   }
 }
 

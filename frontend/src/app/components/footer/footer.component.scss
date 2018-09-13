@@ -2,18 +2,16 @@
 
 footer {
   background: linear-gradient(315deg, $black 0, #161d29 100%);
-  padding: 320px 0 60px 0;
+  padding: 260px 0 60px 0;
   color: $white;
 
-  a {
-    color: $white;
-  }
-
-  #logo-row {
-    margin-bottom: 20px;
-  }
-
   #contact-row {
+    color: $white;
+
+    a {
+      color: $white;
+    }
+
     .contact-col {
       margin-bottom: 12px;
 
@@ -28,6 +26,14 @@ footer {
         font-size: 15px;
       }
     }
+  }
+
+  a {
+    color: $white;
+  }
+
+  #logo-row {
+    margin-bottom: 20px;
   }
 
   .privacy {

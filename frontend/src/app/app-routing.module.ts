@@ -7,14 +7,16 @@ import {WebDesignComponent} from "./components/web-design/web-design.component";
 import {SeoComponent} from "./components/seo/seo.component";
 import {EcommerceComponent} from "./components/ecommerce/ecommerce.component";
 import {PrivacyComponent} from "./components/privacy/privacy.component";
+import {AllArticlesComponent} from "./components/all-articles/all-articles.component";
+import {ArticleComponent} from "./components/article/article.component";
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: HomeComponent,
+    component: NewWebsiteComponent,
   }, {
-    path: 'nettbutikk',
+    path: 'ny-nettbutikk',
     component: EcommerceComponent
   }, {
     path: 'personvern',
@@ -26,11 +28,17 @@ const routes: Routes = [
     path: 'ny-nettside',
     component: NewWebsiteComponent
   }, {
-    path: 'webdesign',
-    component: WebDesignComponent
-  }, {
     path: 'seo',
     component: SeoComponent
+  }, {
+    path: 'artikler',
+    children: [{
+      path: '',
+      component: AllArticlesComponent
+    }, {
+      path: ':articleUrl',
+      component: ArticleComponent
+    }]
   }, {
     path: '**',
     redirectTo: ''

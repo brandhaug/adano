@@ -1,63 +1,51 @@
 @import "../../../styles/variables";
 
 #testimonials {
+  .section-title {
+    margin-bottom: 95px;
+  }
+
   .testimonial {
     margin-top: 30px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    padding: 90px 30px 30px 30px;
+    overflow: visible;
+    height: auto;
+    box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.2);
 
-    img {
+    .testimonial-img {
       border-radius: 50%;
       max-height: 150px;
       margin-bottom: 10px;
+      position: absolute;
+      top: -75px;
+      left: calc(50% - 75px);
+      border: 3px solid white;
     }
 
-    .rating {
-      letter-spacing: 3px;
-      color: $yellow;
-      display: block;
-      font-size: 20px;
-      margin-bottom: 5px;
+    .testimonial-name {
+      font-weight: bold;
     }
 
-    p {
+    .testimonial-company {
+      $blue: #8994c6;
+    }
+
+    .quote-icon {
+      height: 25px;
+      margin: 10px;
+    }
+
+    .testimonial-body p {
       margin-bottom: 5px;
       padding: 0 30px;
-    }
-
-    h6 {
-      margin: 0;
+      color: $blue;
     }
 
     @media (max-width: 768px) {
       margin-bottom: 20px;
     }
-  }
-}
-
-swiper {
-  height: 400px;
-
-  @media (max-width: 520px) {
-    height: 450px;
-  }
-
-  @media (max-width: 323px) {
-    height: 500px;
-  }
-}
-
-.swiper-button-prev {
-  background-image: url("../../../assets/arrow-left.svg") !important;
-}
-
-.swiper-button-next {
-  background-image: url("../../../assets/arrow-right.svg") !important;
-
-}
-
-.swiper-button-prev, .swiper-button-next {
-  height: 30px;
-
-  @media (max-width: 768px) {
-    height: 15px;
   }
 }

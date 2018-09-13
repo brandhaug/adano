@@ -1,0 +1,14 @@
+<app-navigation></app-navigation>
+
+<main id="all-articles">
+  <div class="container">
+    <h1>Artikler</h1>
+  </div>
+
+  <app-articles [articles]="articles" *ngIf="articles"></app-articles>
+
+  <!--<app-contact-us [content]="sections[7]"></app-contact-us>-->
+
+</main>
+
+<app-footer></app-footer>

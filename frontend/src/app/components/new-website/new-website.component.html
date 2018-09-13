@@ -1,3 +1,28 @@
-<p>
-  new-website works!
-</p>
+<app-navigation></app-navigation>
+
+<main *ngIf="sections">
+
+  <app-header [content]="sections[0]" [textAlign]="'right'" [headerUrl]="'/assets/header_website.jpg'" [services]="services"></app-header>
+
+  <app-pros [content]="sections[1]"></app-pros>
+
+  <app-call-to-action [content]="sections[2]"></app-call-to-action>
+
+  <app-projects [content]="sections[3]" [projects]="projects" *ngIf="projects"></app-projects>
+
+  <app-testimonials [content]="sections[4]"></app-testimonials>
+
+  <app-steps [content]="sections[5]"></app-steps>
+
+  <app-about [content]="sections[6]"></app-about>
+
+  <app-contact-us [content]="sections[7]"></app-contact-us>
+
+  <!--<app-articles [articles]="articles" *ngIf="articles"></app-articles>-->
+
+</main>
+
+<app-footer></app-footer>
+
+
+<app-cookie-notice></app-cookie-notice>

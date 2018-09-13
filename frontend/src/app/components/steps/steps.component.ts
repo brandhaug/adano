@@ -23,6 +23,6 @@ export class StepsComponent implements OnInit {
   ngOnInit() {
     this.stepsService.getSteps().subscribe(steps => {
       this.steps = steps;
-    })
+    });
   }
 }

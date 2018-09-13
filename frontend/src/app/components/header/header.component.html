@@ -1,17 +1,32 @@
-<header
-  [ngStyle]="{'background': 'url(' + apiBaseUrl + '/uploads/8f7a9ff4d6f842239ce4269dedba209a.svg) no-repeat left center'}">
-  <div class="container-fluid">
-    <div class="row justify-content-center" id="header-title-row">
-      <div id="header-title-col" class="col text-center">
+<!--<header-->
+  <!--[ngStyle]="{'background': 'url(' + headerUrl + ') no-repeat left center', 'text-align': textAlign}">-->
+  <!--<div class="container" id="title-container">-->
+    <!--<div class="row justify-content-center" id="header-title-row">-->
+      <!--<div id="header-title-col" class="col">-->
+        <!--<h1>{{content.title}}</h1>-->
+        <!--<h3>{{content.subTitle}}</h3>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <!--<app-services [services]="services" *ngIf="services"></app-services>-->
+
+  <!--<a pageScroll href="#pros">-->
+    <!--<img id="header-arrow-down" src="../../../assets/arrow-down.svg">-->
+  <!--</a>-->
+<!--</header>-->
+
+<header>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
         <h1>{{content.title}}</h1>
         <h3>{{content.subTitle}}</h3>
       </div>
     </div>
   </div>
 
-  <app-services [services]="services" *ngIf="services"></app-services>
-
-      <a pageScroll href="#pros">
-        <img id="header-arrow-down" src="../../../assets/arrow-down.svg">
-      </a>
+  <a pageScroll href="#pros">
+  <img id="header-arrow-down" src="../../../assets/arrow-down.svg">
+  </a>
 </header>

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {CookieService} from "ngx-cookie-service";
 
 @Component({
   selector: 'app-cookie-notice',
@@ -9,16 +10,18 @@ export class CookieNoticeComponent implements OnInit {
 
   cookiesAccepted: boolean;
 
-  constructor() {
+  constructor(private cookieService: CookieService) {
   }
 
   ngOnInit() {
-    this.cookiesAccepted = JSON.parse(localStorage.getItem('cookiesAccepted'));
+    if (this.cookieService.check('cookiesAccepted')) {
+      this.cookiesAccepted = JSON.parse(this.cookieService.get('cookiesAccepted'));
+    }
   }
 
   acceptCookies() {
     this.cookiesAccepted = true;
-    localStorage.setItem('cookiesAccepted', JSON.stringify(this.cookiesAccepted));
+    this.cookieService.set('cookiesAccepted', JSON.stringify(this.cookiesAccepted));
   }
 
 }

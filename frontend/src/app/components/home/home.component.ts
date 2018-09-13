@@ -5,6 +5,9 @@ import {Section} from "../../models/section.model";
 import {SectionService} from "../../services/section.service";
 import {Service} from "../../models/service.model";
 import {ServicesService} from "../../services/services.service";
+import {ArticlesService} from "../../services/articles.service";
+import {Article} from "../../models/article.model";
+import {environment} from "../../../environments/environment";
 
 @Component({
   selector: 'app-home',
@@ -16,11 +19,14 @@ export class HomeComponent implements OnInit {
   projects: Project[];
   sections: Section[];
   services: Service[];
+  // articles: Article[];
   path: string = 'root';
+  apiBaseUrl = environment.apiBaseUrl;
 
   constructor(private projectsService: ProjectsService,
               private sectionsService: SectionService,
-              private servicesService: ServicesService) {
+              private servicesService: ServicesService,
+              private articlesService: ArticlesService) {
   }
 
   ngOnInit() {
@@ -36,6 +42,9 @@ export class HomeComponent implements OnInit {
       this.services = services;
     });
 
+    // this.articlesService.getLatestArticles().subscribe(articles => {
+    //   this.articles = articles;
+    // });
   }
 
 }

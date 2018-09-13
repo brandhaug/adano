@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Angulartics2Mixpanel} from "angulartics2/mixpanel";
 import {environment} from "../../../environments/environment";
 
@@ -9,6 +9,7 @@ import {environment} from "../../../environments/environment";
 })
 export class NavigationComponent implements OnInit {
 
+  @Input() hideLinks: boolean;
   apiBaseUrl = environment.apiBaseUrl;
 
   constructor(private mixpanel: Angulartics2Mixpanel) {

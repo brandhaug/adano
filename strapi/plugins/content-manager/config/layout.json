@@ -1,0 +1,24 @@
+{
+  "article": {
+    "attributes": {
+      "title": {
+        "appearance": ""
+      },
+      "caption": {
+        "appearance": ""
+      },
+      "body": {
+        "appearance": "WYSIWYG"
+      },
+      "readingTime": {
+        "appearance": ""
+      },
+      "author": {
+        "appearance": ""
+      },
+      "url": {
+        "appearance": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "article",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    },
+    "headerLarge": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "readingTime": {
+      "type": "integer"
+    },
+    "author": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "headerMedium": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "headerSmall": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}

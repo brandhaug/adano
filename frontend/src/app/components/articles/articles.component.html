@@ -1,0 +1,22 @@
+<section id="articles">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 article-col" *ngFor="let article of articles">
+        <div class="article" [routerLink]="['/artikler/' + article.url]">
+          <div class="article-img"
+               [ngStyle]="{'background': 'url(' + apiBaseUrl + article.headerSmall.url + ') no-repeat center center'}">
+          </div>
+          <div class="article-content">
+            <div class="row">
+              <div class="col article-date"><i class="fa fa-calendar"></i> {{article.createdAt | date}}</div>
+              <div class="col article-reading-time text-right"><i class="fa fa-clock-o"></i> {{article.readingTime}} min
+              </div>
+            </div>
+            <div class="article-title">{{article.title}}</div>
+            <div class="article-read text-center">Les innlegg >></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

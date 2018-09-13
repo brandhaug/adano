@@ -1,4 +1,6 @@
-<section id="testimonials">
+<section id="testimonials"
+         [ngStyle]="{'background': 'url(' + apiBaseUrl + '/uploads/8f7a9ff4d6f842239ce4269dedba209a.svg) no-repeat left center'}">
+
   <div class="container-fluid">
     <div class="row">
       <div class="col text-center">
@@ -8,20 +10,14 @@
     </div>
     <h2 class="section-title">{{content.title}}</h2>
     <swiper [config]="config">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide testimonial text-center" *ngFor="let testimonial of testimonials">
-          <img *ngIf="testimonial.image" src="{{apiBaseUrl}}{{testimonial.image.url}}" alt="{{testimonial.name}}">
-          <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <markdown [data]="testimonial.body"></markdown>
-          <h6><i>- {{testimonial.name}}, {{testimonial.company}}</i></h6>
-        </div>
+      <div class="testimonial text-center" *ngFor="let testimonial of testimonials">
+        <img class="testimonial-img" *ngIf="testimonial.image" src="{{apiBaseUrl}}{{testimonial.image.url}}"
+             alt="{{testimonial.name}}">
+        <div class="testimonial-name">{{testimonial.name}}</div>
+        <div class="testimonial-company">{{testimonial.company}}</div>
+        <img class="quote-icon" src="../../../assets/left-quote.svg">
+        <markdown class="testimonial-body" [data]="testimonial.body"></markdown>
       </div>
-
-      <!-- Add Pagination -->
-      <div class="swiper-pagination"></div>
-      <!-- Add Arrows -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
     </swiper>
   </div>
 </section>

@@ -14,6 +14,9 @@ export class HeaderComponent implements OnInit {
 
   @Input() content: Section;
   @Input() services: Service[];
+  @Input() headerUrl: string;
+  @Input() textAlign: string;
+
   apiBaseUrl = environment.apiBaseUrl;
 
   constructor(private mixpanel: Angulartics2Mixpanel,

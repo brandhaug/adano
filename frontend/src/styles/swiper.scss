@@ -1,0 +1,47 @@
+@import "variables";
+
+//swiper {
+//  height: 400px;
+//
+//  @media (max-width: 520px) {
+//    height: 450px;
+//  }
+//
+//  @media (max-width: 323px) {
+//    height: 500px;
+//  }
+//}
+
+.swiper-button-prev {
+  background-image: url("/assets/arrow-left.svg") !important;
+}
+
+.swiper-button-next {
+  background-image: url("/assets/arrow-right.svg") !important;
+
+}
+
+.swiper-button-prev, .swiper-button-next {
+  height: 30px;
+
+  @media (max-width: 768px) {
+    height: 15px;
+  }
+}
+
+.swiper-container {
+  overflow: visible !important;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 20px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: $light-2 !important;
+
+  &.swiper-pagination-bullet-active {
+    background-color: $blue !important;
+  }
+}
