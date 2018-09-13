@@ -32,6 +32,7 @@ export class NewWebsiteComponent implements OnInit {
 
     this.projectsService.getProjects().subscribe(projects => {
       this.projects = projects;
+      console.log(this.projects)
     });
 
     this.articlesService.getLatestArticles().subscribe(articles => {
