@@ -40,7 +40,6 @@ export class TestimonialsComponent implements OnInit {
   ngOnInit() {
     this.testimonialsService.getTestimonials().subscribe(res => {
       this.testimonials = res;
-      console.log(JSON.stringify(res));
     });
   }
 }

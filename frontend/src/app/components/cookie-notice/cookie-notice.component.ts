@@ -21,7 +21,11 @@ export class CookieNoticeComponent implements OnInit {
 
   acceptCookies() {
     this.cookiesAccepted = true;
-    this.cookieService.set('cookiesAccepted', JSON.stringify(this.cookiesAccepted));
+
+    let expirationDate = new Date();
+    expirationDate.setDate(expirationDate.getDate() + 30);
+
+    this.cookieService.set('cookiesAccepted', JSON.stringify(this.cookiesAccepted), expirationDate);
   }
 
 }
