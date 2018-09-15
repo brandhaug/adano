@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Project} from "../../models/project.model";
 import {Section} from "../../models/section.model";
-import {Service} from "../../models/service.model";
 import {Article} from "../../models/article.model";
 import {ProjectsService} from "../../services/projects.service";
 import {SectionService} from "../../services/section.service";
@@ -32,7 +31,6 @@ export class NewWebsiteComponent implements OnInit {
 
     this.projectsService.getProjects().subscribe(projects => {
       this.projects = projects;
-      console.log(this.projects)
     });
 
     this.articlesService.getLatestArticles().subscribe(articles => {

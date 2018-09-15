@@ -1,17 +1,5 @@
 @import "variables";
 
-//swiper {
-//  height: 400px;
-//
-//  @media (max-width: 520px) {
-//    height: 450px;
-//  }
-//
-//  @media (max-width: 323px) {
-//    height: 500px;
-//  }
-//}
-
 .swiper-button-prev {
   background-image: url("/assets/arrow-left.svg") !important;
 }
@@ -29,8 +17,18 @@
   }
 }
 
+/*
+Problem: Making top of testimonial-image visible when popping out of the container
+Reason: overflow-y: hidden is not possible because overflow-x needs to hidden, which automatically sets overflow-y to auto.
+Workaround: making padding on top and removing the extra space with negative margin
+ */
+
 .swiper-container {
-  overflow: visible !important;
+  //overflow-x: hidden;
+  //overflow-y: visible !important;
+  padding-top: 50px !important;
+  margin-top: -50px !important;
+
 }
 
 .swiper-pagination {

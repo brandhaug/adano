@@ -1,6 +1,8 @@
 export interface Section {
   title: string;
   subTitle: string;
-  icon: string;
+  icon: {
+    url: string
+  };
   body: string;
 }

@@ -19,18 +19,17 @@ export class TestimonialsComponent implements OnInit {
   config: SwiperConfigInterface = {
     pagination: true,
     navigation: true,
-    spaceBetween: 30,
+    observer: true,
     slidesPerView: 3,
+    spaceBetween: 30,
     breakpoints: {
-      // when window width is <= 480px
-      1025: {
+      850: {
         slidesPerView: 1,
-        // spaceBetweenSlides: 20
+        spaceBetween: 20
       },
-      // when window width is <= 640px
       1230: {
         slidesPerView: 2,
-        // spaceBetweenSlides: 50
+        spaceBetween: 50
       }
     }
   };
@@ -41,6 +40,7 @@ export class TestimonialsComponent implements OnInit {
   ngOnInit() {
     this.testimonialsService.getTestimonials().subscribe(res => {
       this.testimonials = res;
+      console.log(JSON.stringify(res));
     });
   }
 }
